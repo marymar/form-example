@@ -1,0 +1,40 @@
+
+@mixin grid-flex() {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+.grid {
+  @media screen and (min-width: $breakpoint-screen-tablet) and (max-width: ($breakpoint-screen-desktop -1)) {
+    @include grid-flex;
+
+    &__col-m-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+
+      &:first-child {
+        padding-right: $default-gap;
+      }
+      &:last-child {
+        padding-left: $default-gap;
+      }
+    }
+  }
+
+  @media screen and (min-width: $breakpoint-screen-desktop) {
+    @include grid-flex;
+    &__col-l-6 {
+      flex: 0 0 50%;
+      max-width: 50%;
+
+      &:first-child {
+        padding-right: $default-gap;
+      }
+      &:last-child {
+        padding-left: $default-gap;
+      }
+    }
+  }
+}

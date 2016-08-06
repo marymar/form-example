@@ -1,0 +1,10 @@
+.input {
+  padding: 1.1em;
+  width: 100%;
+  border: 1px solid $default-border-color;
+  border-radius: $default-border-radius;
+
+  &:focus {
+    outline-color: $default-emphasize-color;
+  }
+}
