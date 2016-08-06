@@ -1,0 +1,13 @@
+@import 'global/reset',
+'global/variables',
+'global/placeholder';
+
+//blocks
+@import 'block/page',
+'block/grid/grid',
+'block/font/title',
+'block/form/form',
+'block/form/button',
+'block/form/label',
+'block/form/input',
+'block/form/textarea';

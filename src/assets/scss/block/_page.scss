@@ -1,0 +1,8 @@
+.page {
+  margin: $default-gap $default-gap;
+  color: $default-font-color;
+
+  @media (min-width: $breakpoint-screen-tablet){
+    max-width: 1024px;
+  }
+}

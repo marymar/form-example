@@ -1,0 +1,53 @@
+// prepared for more buttons types...
+
+$buttons: (
+  confirm: (
+    color: $default-emphasize-color,
+    border-color: $default-emphasize-color
+  )
+);
+
+%button {
+  font-size: .9rem;
+  font-weight: 700;
+  text-align: center;
+  cursor: pointer;
+  border: none;
+  padding: $default-gap;
+  background: none;
+  border-radius: $default-border-radius;
+  outline: none;
+  width: 100%;
+
+  &[disabled] {
+    cursor: default;
+    opacity: .5;
+  }
+
+  @media (min-width: $breakpoint-screen-tablet) {
+    min-width: 175px;
+    width: auto;
+  }
+}
+
+@each $button-name, $button-settings in $buttons {
+  $button-color: map-get($button-settings, 'color');
+  $button-bg-color: map-get($button-settings, 'border-color');
+
+  .button-#{$button-name} {
+    @extend %button;
+
+    color: $button-color;
+    border: 1px solid $button-bg-color;
+
+    &:hover {
+      color: darken($button-color, 10%);
+      border-color: darken($button-bg-color, 10%);
+    }
+
+    &:active {
+      color: darken($button-color, 15%);
+      border-color: darken($button-bg-color, 15%);
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.form {
+    font-size: .9rem;
+
+    &__input-block {
+        @extend %clearfix;
+        margin: $default-gap 0;
+
+        @media screen and (min-width: $breakpoint-screen-tablet) {
+            &--tablet-leant-to-right {
+                text-align: right;
+                margin: 0;
+                padding-right: $default-gap;
+            }
+
+            &--tablet-left-aside {
+                float: left;
+            }
+
+            &--tablet-stretched {
+                height: 100%
+            }
+        }
+    }
+}
