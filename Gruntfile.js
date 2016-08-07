@@ -31,17 +31,10 @@ module.exports = function (grunt) {
         tasks: ['copy:html']
       },
 
-      img: {
-        files: 'src/assets/img/*.*',
-        tasks: ['copy:img']
-      },
-
       js: {
         files: 'src/js/*.*',
         tasks: ['copy:js']
       }
-
-
     },
 
     copy: {
