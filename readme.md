@@ -1,4 +1,4 @@
-#XX-DING
+#Form Example
 
 Example of a responsive Form.
 
