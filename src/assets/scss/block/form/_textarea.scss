@@ -6,10 +6,15 @@
   padding: 1.1em;
 
   @media screen and (min-width: $breakpoint-screen-desktop) {
-    height: calc(100% - #{$default-gap * 3});
+    height: calc(100% - #{$default-gap});
   }
 
   &:focus {
     outline-color: $default-emphasize-color;
   }
+
+  &--invalid {
+    border: 1px solid #f00;
+  }
+
 }

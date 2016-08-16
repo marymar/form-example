@@ -1,24 +1,41 @@
 .form {
-    font-size: .9rem;
+  font-size: .9rem;
 
-    &__input-block {
-        @extend %clearfix;
-        margin: $default-gap 0;
+  &__input-block {
+    margin: $default-gap 0;
 
-        @media screen and (min-width: $breakpoint-screen-tablet) {
-            &--tablet-leant-to-right {
-                text-align: right;
-                margin: 0;
-                padding-right: $default-gap;
-            }
-
-            &--tablet-left-aside {
-                float: left;
-            }
-
-            &--tablet-stretched {
-                height: 100%
-            }
-        }
+    &:last-child {
+      margin-bottom: 0;
     }
+
+    @media screen and (min-width: $breakpoint-screen-tablet) {
+      &--tablet-leant-to-right {
+        text-align: right;
+        margin: 0;
+      }
+
+      &--tablet-left-aside {
+        float: left;
+      }
+
+      &--tablet-stretched {
+        height: calc(100% - #{$default-gap});
+      }
+    }
+
+    @media screen and (min-width: $breakpoint-screen-desktop) {
+      &--tablet-leant-to-right {
+        padding-right: $default-gap;
+      }
+    }
+  }
+
+  &__input-block-msg {
+    display: none;
+    color: #f00;
+
+    &::after {
+      content: attr(data-message);
+    }
+  }
 }

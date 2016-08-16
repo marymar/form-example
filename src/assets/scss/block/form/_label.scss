@@ -1,8 +1,4 @@
 .label {
   margin-bottom: $default-gap / 2;
   display: block;
-
-  @media screen and (min-width: $breakpoint-screen-tablet) {
-    display: inline-block;
-  }
 }

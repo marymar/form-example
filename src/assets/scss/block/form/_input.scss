@@ -7,4 +7,8 @@
   &:focus {
     outline-color: $default-emphasize-color;
   }
+
+  &--invalid {
+    border: 1px solid #f00;
+  }
 }
